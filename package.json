@@ -1,0 +1,21 @@
+{
+	"name": "Gattermeier-Notes",
+    "version": "1.0.1",
+    "private": true,
+    "description": "A simple note taking application",
+	"main": "server.js",
+	"dependencies": {
+		"express": "latest",
+        "express-session": "latest",
+        "ejs": "latest",
+	  	"mongoose": "latest",
+      	"morgan": "latest",
+        "passport": "latest",
+        "passport-local": "latest",
+        "bcrypt-nodejs": "latest",
+        "connect-flash": "latest",
+      	"cookie-parser": "latest",
+      	"body-parser": "latest",
+      	"bower": "latest"
+	}
+}

@@ -1,0 +1,53 @@
+.shapeshift > div {
+    width: 200px;
+    /*height: 100px;*/
+    position: absolute;
+    background: #CCC;
+}
+.shapeshift {
+    position: relative;
+
+}
+
+.note {
+    background: #ddd;
+}
+
+.note-create div.note-list-item{
+    margin:5px;
+    padding:5px;
+    background: #ffffff;
+    border: 1px solid #999;
+    min-height: 300px;
+}
+.note-create-title {
+
+}
+
+.note-create-content {
+   min-height: 100px;
+}
+
+.note-load div {
+    padding-top:50px;
+}
+
+.note-list div.note-list-item {
+    min-height: 150px;
+    margin:5px;
+    padding:5px;
+    background: #ffffff;
+    border: 1px solid #999;
+}
+.box {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #428bca;
+    border-radius: 4px;
+
+}

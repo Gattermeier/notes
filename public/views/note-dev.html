@@ -1,0 +1,103 @@
+
+
+
+
+
+<div class="row note" style="margin-top: 65px;">
+
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="form-control text-center" style="min-height:55px; padding:9px; margin-bottom: 10px;">
+            <a href="/login" class="btn btn-default" style="min-width:30%;"><span class="fa fa-user"></span> Login</a>
+            <a href="/register" class="btn btn-default" style="min-width:30%;"><span class="fa fa-user"></span> Signup</a>
+            <a target="_self" href="/logout" class="btn btn-default" style="min-width:30%;"><span class="fa fa-cab"></span> Logout</a>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <input type="text" class="form-control text-left note-create-title" placeholder="Note title" ng-model="formData.title">
+
+                </h3>
+            </div>
+            <div class="panel-body">
+                <textarea type="text" class="form-control text-left note-create-content" placeholder="Note content" ng-model="formData.content">
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary btn-lg" style="border-radius:0px;" ng-click="createNote()">Add Note</button>
+
+        </div>
+        <div class="form-control text-left" style="min-height: 150px; padding:10px;">
+            <p>Debuginfo: {{ debuginfo }}<br></p>
+            <p style="font-style: italic">A project by: {{ firstname }} {{ lastname }}<br>
+                <a href="{{ web }}">{{ web }}</a>
+            </p>
+
+        </div>
+    </div>
+    <!--
+            <div class="col-xs-12 col-sm-6 col-md-4 note-create">
+                <div class="note-list-item">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control text-left note-create-title" placeholder="Note title" ng-model="formData.title">
+                        <input type="text" class="form-control text-left note-create-content" placeholder="Note content" ng-model="formData.content">
+                       <!-- <input type="text" class="form-control text-left" placeholder="Note tags" ng-model="formData.tags">-->
+    <!--
+                    </div>
+
+                    <button type="submit" class="btn btn-block btn-primary btn-lg"  ng-click="createNote()">Add Note</button>
+                </form>
+                </div>
+            </div>
+                -->
+    <!--
+            <div class="col-xs-12 col-sm-6 col-md-4 note-list note-load"  ng-show="loading">
+                <div class="note-list-item">
+
+                <p class="text-center" >
+                    <span class="fa fa-spinner fa-spin fa-3x"></span>
+                </p>
+                </div>
+
+            </div>
+    -->
+    <div class="" style="margin-bottom:5px;" ng-repeat="Notes in notes">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="panel panel-warning ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ Notes.title; }}</h3>
+                </div>
+                <div class="panel-body">
+                    {{ Notes.content }}
+                </div>
+                <div class="btn" ng-click="deleteNote(Notes._id)">Delete</div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="row debug" style="position: fixed; bottom: 0;">
+    <div class="col-sm-12">
+        <p>Debuginfo: {{ debuginfo }}<br>
+        <p style="font-style: italic">A project by: {{ firstname }} {{ lastname }}<br>
+            <a href="{{ web }}">{{ web }}</a>
+        </p>
+
+    </div>
+</div>
+
+
+<div class="" ng-repeat="Notes in notes">
+
+    <div class="col-xs-12 col-sm-6 col-md-4 note-list">
+        <div class="note-list-item">
+
+            <div > Title: {{ Notes.title; }} Content: {{ Notes.content }} Tags: {{ Notes.tags }} </div>
+            <div class="btn btn-danger" ng-click="deleteNote(Notes._id)">Delete</div><br>
+        </div>
+    </div>
+</div>
